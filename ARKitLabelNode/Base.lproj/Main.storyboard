@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitLabelNode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xPh-As-LXj" customClass="ARSCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointer" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-No-9mZ">
+                                <rect key="frame" x="162" y="308" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IhJ-B9-okq"/>
+                                    <constraint firstAttribute="height" constant="50" id="PXA-Ys-ItZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljH-FD-bMf">
+                                <rect key="frame" x="315" y="607" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="p2c-hs-a0I"/>
+                                    <constraint firstAttribute="height" constant="40" id="tgH-tO-ZLR"/>
+                                </constraints>
+                                <state key="normal" image="clean"/>
+                                <connections>
+                                    <action selector="tapCleanButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Knp-KP-Mrd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ym6-qT-Tsa" firstAttribute="trailing" secondItem="ljH-FD-bMf" secondAttribute="trailing" constant="20" id="QIr-lx-B8c"/>
+                            <constraint firstItem="RAP-No-9mZ" firstAttribute="centerX" secondItem="xPh-As-LXj" secondAttribute="centerX" id="T5Z-KU-KAC"/>
+                            <constraint firstItem="RAP-No-9mZ" firstAttribute="centerY" secondItem="xPh-As-LXj" secondAttribute="centerY" id="qFU-iK-hCQ"/>
+                            <constraint firstItem="Ym6-qT-Tsa" firstAttribute="bottom" secondItem="ljH-FD-bMf" secondAttribute="bottom" constant="20" id="u1a-lP-TUu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ym6-qT-Tsa"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="xPh-As-LXj" id="pXG-a2-upa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clean" width="100" height="100"/>
+        <image name="pointer" width="97" height="96"/>
+    </resources>
+</document>
